@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Nostalgic Candy</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+</head>
+<body>
+
+<!-- Check if the user is registered as an adult -->
+    <button id="goToAdult">Go to Adult Website</button>
+	
+	
+    <div class="container">
+        <h1>Welcome to Nostalgic Candy</h1>
+        <p>Explore our selection of candy products.</p>
+      
+		<ul>
+		
+            <li>...</li>
+			<li><a href="kids_products.html">Products</a></li>
+            <li><a href="kids_about.html">About Us</a></li>
+            <li><a href="kids_contact.html">Contact</a></li>
+        </ul>
+    </div>
+	
+	
+	<script>
+        const isAdultUser = checkUserType(); // Check if the user is registered as an adult
+
+        if (isAdultUser) {
+            const goToAdultButton = document.getElementById("goToAdult");
+            goToAdultButton.style.display = "block";
+
+            goToAdultButton.addEventListener("click", () => {
+                // Redirect to the adult website
+                window.location.href = "adult_index.html";
+            });
+        }
+
+        // A function to simulate checking the user type (kid or adult)
+        function checkUserType() {
+            // Replace with your actual logic for checking the user type
+            const userType = getCookie("userType");
+            return userType === "adult";
+        }
+		
+		// A function to get a cookie by name (simplified for illustration)
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
+	
+	<!-- Adult website content -->
+<button><a href="adult_index.html">Go Back to Kids' Website</a></button>
+
+
+
+	
+	<!-- Footer -->
+    <footer>
+        <p class="footer-text">DesignedBy_Pule Mathikha</p>
+        <p class="copyright-symbol">© <a href="kids_index.html">Nostalgic Candy</a></p>
+    </footer>
+</body>
+</html>

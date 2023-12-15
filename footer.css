@@ -1,0 +1,20 @@
+/* Apply styling to the footer */
+footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the "Designed by" text */
+.footer-text {
+    font-size: 14px;
+}
+
+/* Style the copyright symbol */
+.copyright-symbol {
+    font-size: 12px;
+}
